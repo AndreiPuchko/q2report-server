@@ -15,7 +15,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://datatodoc.de/q2report-editor",
+        "https://datatodoc.de",
     ],
     allow_credentials=True,
     allow_methods=["*"],
