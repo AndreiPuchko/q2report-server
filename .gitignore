@@ -1,0 +1,5 @@
+test_files/*
+__pycache__
+.venv/*
+.vscode/*
+run_dev.ps1
