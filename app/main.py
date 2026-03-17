@@ -9,7 +9,7 @@ from . import tasks
 import asyncio
 from datetime import datetime
 
-app = FastAPI()
+app = FastAPI(root_path="/q2report-server/api/v1")
 
 app.add_middleware(
     CORSMiddleware,
@@ -87,3 +87,8 @@ async def download(task_id: str):
         media_type="application/octet-stream",
         headers={"Content-Disposition": "attachment; filename=report.zip"},
     )
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
