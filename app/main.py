@@ -9,6 +9,11 @@ from . import tasks
 import asyncio
 from datetime import datetime
 
+import os
+
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
+
+
 app = FastAPI(root_path="/q2report-server/api/v1")
 
 app.add_middleware(
